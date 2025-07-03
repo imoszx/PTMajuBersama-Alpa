@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Maju Bersama - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/PT MAJU BERSAMA.png" alt="Logo PT Maju Bersama">
+                </a>
+                <div class="nav-menu-wrapper">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="profile.html" class="nav-link">Company Profile</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 id="welcome-text">Hai, <span id="guest-name">Anomali</span>!</h1>
+                <p>Selamat datang di website resmi PT Maju Bersama. Kami senang Anda berkunjung.</p>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <section class="card form-section">
+                <h2>Hubungi Kami</h2>
+                <p class="form-intro">Punya pertanyaan atau masukan? Kirimkan kepada kami!</p>
+                <form id="message-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="full-name">Nama Lengkap</label>
+                        <input type="text" id="full-name" name="fullName" placeholder="contoh: Bong Deni Hegar ">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" placeholder="contoh: nyianhoax@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="contoh: 081234567890">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan Anda</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    <div id="error-message"></div>
+                    <button type="submit" class="submit-button">Kirim Pesan</button>
+                </form>
+            </section>
+            
+            <section id="form-result-section" class="card form-result" style="display: none;">
+                <h2>Informasi Terkirim</h2>
+                <p><strong>Nama:</strong> <span id="result-name"></span></p>
+                <p><strong>Email:</strong> <span id="result-email"></span></p>
+                <p><strong>Telepon:</strong> <span id="result-phone"></span></p>
+                <p><strong>Pesan:</strong> <span id="result-message"></span></p>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2025 PT Maju Bersama. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
